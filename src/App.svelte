@@ -8,6 +8,7 @@
     let change;
     $:overlay = change;
     $:visible = change;
+
     const clientWidth = document.documentElement.clientWidth;
 
     const navItems = [
