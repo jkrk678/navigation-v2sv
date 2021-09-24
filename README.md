@@ -1,0 +1,1 @@
+Another Vanilla JS project built in Svelte for practice.

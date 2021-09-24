@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root {
+    --primaryColor: #fff;
+    --navColor1: #21292c;
+    --navColor2: #aa3e39;
+    --navColor3: #aa6e39;
+    --navColor4: #236267;
+    --navColor5: #2c8437;
+}
+
+body {
+	margin: 0;
+    background: #000;
+	box-sizing: border-box;
+	font-family: "Nunito", sans-serif;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primaryColor);
+}
+
+section#home {
+    background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1472&q=80");
+    background-size: cover;
+    background-position: center center;
+}
+
+section#home a {
+    position: absolute;
+    z-index: 2;
+    top: 1.5rem;
+    left: 1.5rem;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding-bottom: 5px;
+    color: var(--primaryColor);
+    border-bottom: 1px solid var(--primaryColor);
+}
+
+  section#about {
+    background-color: var(--navColor2);
+  }
+
+  section#skills {
+    background-color: var(--navColor3);
+  }
+
+  section#projects {
+    background-color: var(--navColor4);
+  }
+
+  section#contact {
+    background-color: var(--navColor5);
+  }
+
+  li {
+    height: 20%;
+    overflow: hidden;
+}
+
+li:nth-child(1) {
+    background-color: var(--navColor1);
+}
+
+li:nth-child(2) {
+    background-color: var(--navColor2);
+}
+
+li:nth-child(3) {
+    background-color: var(--navColor3);
+}
+
+li:nth-child(4) {
+    background-color: var(--navColor4);
+}
+
+li:nth-child(5) {
+    background-color: var(--navColor5);
+}
+
+.slide-in-1 {
+    animation: slide-in 400ms linear 200ms both;
+}
+
+.slide-in-2 {
+    animation: slide-in 400ms linear 400ms both;
+}
+
+.slide-in-3 {
+    animation: slide-in 400ms linear 600ms both;
+}
+
+.slide-in-4 {
+    animation: slide-in 400ms linear 800ms both;
+}
+
+.slide-in-5 {
+    animation: slide-in 400ms linear 1000ms both;
+}
+
+.slide-out-1 {
+    animation: slide-out 300ms linear 500ms both;
+}
+
+.slide-out-2 {
+    animation: slide-out 300ms linear 400ms both;
+}
+
+.slide-out-3 {
+    animation: slide-out 300ms linear 300ms both;
+}
+
+.slide-out-4 {
+    animation: slide-out 300ms linear 200ms both;
+}
+
+.slide-out-5 {
+    animation: slide-out 300ms linear 100ms both;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+  /* Media Query: Large Smartphone (Vertical) */
+  @media (max-width: 600px) {
+    section#home a {
+      top: 1rem;
+      left: 1rem;
+    }
+
+    .menu-bars {
+      top: 0.5rem;
+      right: 1rem;
+    }
+  }
