@@ -10,19 +10,25 @@
 {#if visible}
 <li in:fly={flyIn} out:fly={flyOut}>
     <a {href} on:click>{title}</a>
+    <div></div>
 </li>
 {/if}
 
 <style>
+    li {
+        position: relative;
+    }
+
     a {
         color: #fff;
         text-transform: uppercase;
         letter-spacing: 4px;
         text-decoration: none;
-        display: block;
-        text-align: center;
-        position: relative;
-        top: 47.5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
         transition-duration: 250ms;
     }
 
@@ -31,20 +37,20 @@
         transition-duration: 500ms;
     }
 
-    a::before {
-        content: "";
+    div {
+        /* content: ""; */
         width: 25vw;
         height: 2px;
         background-color: #fff;
         position: absolute;
-        top: 47.5%;
+        top: 50%;
         left: 0;
         transform: scaleX(0);
         transition: 500ms ease-in-out;
         transform-origin: left;
     }
 
-    a:hover::before {
+    a:hover + div {
         transform: scaleX(1);
         transition: 250ms ease-in-out;
     }
